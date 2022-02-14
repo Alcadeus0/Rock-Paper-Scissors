@@ -32,6 +32,7 @@ h2 {
     flex-direction: row;
     gap: 100px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 img {
     width: 200px;
