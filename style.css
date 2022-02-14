@@ -53,6 +53,7 @@ button:hover{
 .result {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 25px;
     background-color: burlywood;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana;

@@ -36,12 +36,6 @@ function result() {
         div.textContent = "You Lose!";
     }
     div.setAttribute('style','color: coral','fontSize: 25px');
-    const result = document.querySelector('.result');
-    result.appendChild(div);
-    refresh()
-}
-
-function refresh(){
     const btn = document.createElement('button');
     btn.classList.add('buttons');
     btn.textContent = "Try Again?"
@@ -52,13 +46,14 @@ function refresh(){
         bot.textContent = 0;
         div.remove();
         btn.remove();
-        document.getElementById("myBtn").disabled = false;
-        document.getElementById("myBtn").disabled = false;
-        document.getElementById("myBtn").disabled = false;
+        document.getElementById("Rock").disabled = false;
+        document.getElementById("Paper").disabled = false;
+        document.getElementById("Scissors").disabled = false;
     });
     const result = document.querySelector('.result');
-    result.append(btn);
+    result.append(div, btn);
 }
+
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
