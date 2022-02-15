@@ -1,6 +1,6 @@
 function computerPlay(){
     const picks = ["Rock", "Paper", "Scissors"];
-     let ans = Math.floor(Math.random() * 3);
+     let ans = Math.round(Math.random() * 2);
      return picks[ans];
 }
 const player = document.querySelector('#player')
@@ -11,10 +11,14 @@ let botScore = 0;
 
 function playRound(playerSelection){
     computerSelection = computerPlay();
+    console.log(playerSelection + ' vs ' + computerSelection)
     if ((playerSelection === "Rock" && computerSelection === "Scissors") || (playerSelection === "Paper" && computerSelection === "Rock") || (playerSelection === "Scissors" && computerSelection === "Paper")) {
         playerScore += 1;
         player.textContent = playerScore;
-        }
+    }
+    else if (playerSelection === computerSelection){
+        return undefined;
+    }
     else {
         botScore += 1;
         bot.textContent = botScore;
